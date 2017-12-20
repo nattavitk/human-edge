@@ -44,13 +44,13 @@ const COLORS = {
   whiteThree: '#e2e2e2',
 };
 
-export const PRIMARY = Grapefruit;
-export const PRIMARY_LIGHT = COLORS.peachyPinkTwo;
+export const PRIMARY = COLORS.dodgerBlue;
+export const PRIMARY_LIGHT = COLORS.skyBlue;
 
 export const PRIMARY_NAV = COLORS.white;
 export const PRIMARY_NAV_INVERSE = COLORS.g4;
 
-export const TINT_COLOR = Grapefruit;
+export const TINT_COLOR = COLORS.dodgerBlue;
 
 export const UNDERLAY = COLORS.g1;
 

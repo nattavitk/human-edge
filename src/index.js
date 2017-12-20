@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components/native';
-import { StyleSheet } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+
+import SplashScreen from './screens/SplashScreen';
+import MainScreen from './screens/Main';
+import AuthScreen from './screens/Auth';
 
 import Text from './components/Text';
 import Color from './components/Colors';
@@ -14,17 +18,15 @@ const StyledView = styled.View`
   justify-content: center;
 `;
 
-class App extends React.Component {
+const CitizenApp = StackNavigator({
+  [SplashScreen.title]: { screen: SplashScreen.component },
+  [MainScreen.title]: { screen: MainScreen.component },
+  [AuthScreen.title]: { screen: AuthScreen.component },
+});
+
+class App extends Component {
   render() {
-    return (
-      <StyledView>
-        <Text.UIText>
-          Test Open up App.js to start working on your app!
-        </Text.UIText>
-        <Text.UIText>Changes you make will automatically reload.</Text.UIText>
-        <Text.UIText>Shake your phone to open the developer menu.</Text.UIText>
-      </StyledView>
-    );
+    return <CitizenApp />;
   }
 }
 

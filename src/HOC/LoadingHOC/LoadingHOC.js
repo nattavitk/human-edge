@@ -38,7 +38,7 @@ const LoadingHOC = () => {
       async _loadAssetsAsync() {
         console.log('will load asset');
         const imageAssets = cacheImages([
-          //  require('../../../assets/images/screens/group.png'),
+          require('../../../assets/images/logo.png'),
           //  require('../../../assets/images/screens/white.png'),
           //  require('../../../assets/images/screens/intro_bg.png'),
           //  require('../../../assets/images/tab/emptyChooseFav.png'),
