@@ -1,23 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import styled from 'styled-components/native';
+import { StyleSheet } from 'react-native';
 
-export default class App extends React.Component {
+import Text from './components/Text';
+import Color from './components/Colors';
+
+import HOC from './HOC';
+
+const StyledView = styled.View`
+  flex: 1;
+  background-color: ${Color.GREYSCALE.WHITE};
+  align-items: center;
+  justify-content: center;
+`;
+
+class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <StyledView>
+        <Text.UIText>
+          Test Open up App.js to start working on your app!
+        </Text.UIText>
+        <Text.UIText>Changes you make will automatically reload.</Text.UIText>
+        <Text.UIText>Shake your phone to open the developer menu.</Text.UIText>
+      </StyledView>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default HOC.LoadingHOC()(App);
