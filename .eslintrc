@@ -1,0 +1,32 @@
+{
+   "parserOptions": {
+     "ecmaVersion": 2016,
+     "sourceType": "module",
+     "ecmaFeatures": {
+       "jsx": true
+     }
+   },
+   "env": {
+     "es6": true,
+     "node": true
+   },
+   "rules": {
+     "prettier/prettier": [
+       "error",
+       {
+         "trailingComma": "es5",
+         "singleQuote": true,
+         "printWidth": 100
+       }
+     ],
+     "react/jsx-filename-extension": [
+       "warn",
+       {
+         "extensions": [".js", ".jsx"]
+       }
+     ]
+   },
+   "extends": ["airbnb", "prettier"],
+   "plugins": ["react", "prettier"]
+ }
+ 
