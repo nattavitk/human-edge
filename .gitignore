@@ -3,6 +3,10 @@
 # expo
 .expo/
 
+# cloud_function
+/functions/node_modules
+/functions/citizen-api.json
+
 # dependencies
 /node_modules
 
