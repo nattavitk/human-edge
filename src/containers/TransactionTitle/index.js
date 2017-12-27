@@ -1,3 +1,3 @@
-import TranscationTitle from './TransactionTitle';
+import TranscationTitle from './TransactionTitle.mapper';
 
 export default TranscationTitle;

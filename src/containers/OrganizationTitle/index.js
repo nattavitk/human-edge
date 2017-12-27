@@ -1,3 +1,3 @@
-import OrganizationTitle from './OrganizationTitle';
+import OrganizationTitle from './OrganizationTitle.mapper';
 
 export default OrganizationTitle;
