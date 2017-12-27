@@ -45,8 +45,9 @@ export const UIText = Text;
 
 export const Title = UIText.extend`
   font-family: ${({ font }) => font || FONT_FACE.PROMPT.SEMIBOLD};
-  font-size: ${Size.title};
-  line-height: ${getLineHeight(Size.title)};
+  font-size: ${({ size }) => size || Size.title};
+  line-height: ${({ size }) =>
+    getLineHeight(size) || getLineHeight(Size.title)};
   color: ${({ color }) => color || Colors.PRIMARY};
 `;
 

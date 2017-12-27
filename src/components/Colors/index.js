@@ -40,7 +40,6 @@ const COLORS = {
   peachyPink: '#ff977c',
   beige: '#f3e0d9',
   greenishTeal: '#2ecc71',
-  whiteTwo: '#f9f9f9',
   whiteThree: '#e2e2e2',
 };
 
