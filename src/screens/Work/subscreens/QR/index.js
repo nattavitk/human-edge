@@ -1,4 +1,4 @@
-import QR from './QR';
+import QR from './QR.mapper';
 
 export default {
   title: 'QR',

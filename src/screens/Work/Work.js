@@ -1,17 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StackNavigator } from 'react-navigation';
 
 import QR from './subscreens/QR';
-import { StackNavigator } from '../../../../../../../Library/Caches/typescript/2.6/node_modules/@types/react-navigation';
+import TransactionDetail from './subscreens/Transaction/TransactionDetail';
+import TransactionDocument from './subscreens/Transaction/TransactionDocument';
+import Result from './subscreens/Result';
 
 const routes = {
   [QR.title]: { screen: QR.component },
+  [TransactionDetail.title]: { screen: TransactionDetail.component },
+  [TransactionDocument.title]: { screen: TransactionDocument.component },
+  [Result.title]: { screen: Result.component },
 };
 
 const Work = StackNavigator(route, {
   initialRouteName: QR.title,
   navigationOptions: ({ navigation }) => ({
-    title: 'Work',
+    title: 'Transaction',
   }),
 });
 

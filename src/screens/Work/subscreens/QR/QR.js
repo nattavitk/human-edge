@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components/native';
 import { Icon } from 'native-base';
 import {
@@ -11,8 +12,11 @@ import {
 } from 'react-native';
 import { BarCodeScanner, Permissions } from 'expo';
 
+import * as config from '../../../../config';
 import Text from '../../../../components/Text';
 import Color from '../../../../components/Colors';
+
+import { TEST_DATA } from '../../../../core/testData';
 
 const Container = styled.View`
   flex: 1;
@@ -74,6 +78,14 @@ class QR extends Component {
     if (result.data !== this.state.lastScannedUrl) {
       LayoutAnimation.spring();
       this.setState({ lastScannedUrl: result.data });
+
+      // By pass here to the next workflow screen
+      if (config.TEST_MODE) {
+        this.props.setTransaction(TEST_DATA);
+      } else {
+        // Call redux thunk to get transaction from backend here
+      }
+      this.props.navigation.navigate('TransactionDetail');
     }
   };
 
@@ -156,5 +168,13 @@ class QR extends Component {
     );
   }
 }
+
+QR.propTypes = {
+  setTransaction: PropTypes.func,
+};
+
+QR.defaultProps = {
+  setTransaction: () => {},
+};
 
 export default QR;

@@ -1,4 +1,4 @@
-import TransactionDocument from './TransactionDocument';
+import TransactionDocument from './TransactionDocument.mapper';
 
 export default {
   title: 'TransactionDocument',
