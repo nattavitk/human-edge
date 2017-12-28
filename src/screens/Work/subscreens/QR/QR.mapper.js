@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import QR from './QR';
-import actions from '../../actions';
+import actions from '../../../../actions';
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {

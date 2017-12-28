@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import TransactionDetail from './TransactionDetail';
+import DocumentList from './DocumentList';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -7,4 +7,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps)(TransactionDetail);
+export default connect(mapStateToProps)(DocumentList);

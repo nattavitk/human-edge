@@ -1,4 +1,4 @@
-import TransactionDetail from './TransactionDetail.mapper';
+import TransactionDetail from './TransactionDetail';
 
 export default {
   title: 'TransactionDetail',

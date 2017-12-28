@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import OrganizationTitle from './OrganizationTitle';
 
 const mapStateToProps = state => ({
-  transaction: state.transaction.transaction,
+  title: state.transaction.transaction.organizationName,
 });
 
 export default connect(mapStateToProps)(OrganizationTitle);

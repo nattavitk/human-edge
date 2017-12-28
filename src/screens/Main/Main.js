@@ -28,9 +28,40 @@ const route = {
         }}
       />
     ),
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => (
+        <Icon
+          ios="ios-qr-scanner"
+          android="md-qr-scanner"
+          style={{ fontSize: 20, color: Color.PRIMARY }}
+        />
+      ),
+    },
   },
-  [Profile.title]: { screen: Profile.component },
-  [Transaction.title]: { screen: Transaction.component },
+  [Profile.title]: {
+    screen: Profile.component,
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => (
+        <Icon
+          ios="ios-person"
+          android="md-person"
+          style={{ fontSize: 20, color: Color.PRIMARY }}
+        />
+      ),
+    },
+  },
+  [Transaction.title]: {
+    screen: Transaction.component,
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => (
+        <Icon
+          ios="ios-document"
+          android="md-document"
+          style={{ fontSize: 20, color: Color.PRIMARY }}
+        />
+      ),
+    },
+  },
 };
 
 const Main = TabNavigator(route, {

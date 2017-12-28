@@ -69,6 +69,9 @@ export const LoadFontsAsync = () => {
 };
 
 export default {
+  Size,
+  FONT_FACE,
+  getLineHeight,
   Text,
   UIText,
   Title,

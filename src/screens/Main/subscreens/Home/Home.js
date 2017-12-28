@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/native';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, StatusBar } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 import { Icon } from 'native-base';
 
@@ -68,6 +68,7 @@ class Home extends Component {
             <Text.UIText>Press to scan QR</Text.UIText>
           </View>
         </TouchableOpacity>
+        <StatusBar barStyle="dark-content" />
       </Container>
     );
   }

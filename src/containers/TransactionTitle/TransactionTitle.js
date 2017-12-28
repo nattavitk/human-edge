@@ -1,18 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
+import { Icon } from 'native-base';
 
 import Text from '../../components/Text';
 import Color from '../../components/Colors';
 
 const Container = styled.View`
-  flex: 1;
-  color: ${Color.COLORS.facebook};
+  align-items: center;
 `;
 
 const TransactionTitle = ({ title }) => (
   <Container>
-    <Text.UIText>{title}</Text.UIText>
+    <Icon
+      ios="ios-document"
+      android="md-document"
+      style={{ fontSize: 50, color: Color.PRIMARY }}
+    />
+    <Text.Title color={Color.COLORS.facebook}>{'Transaction'}</Text.Title>
+    <Text.UIText color={Color.COLORS.facebook}>{title}</Text.UIText>
   </Container>
 );
 

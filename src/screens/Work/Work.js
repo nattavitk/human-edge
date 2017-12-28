@@ -11,10 +11,19 @@ const routes = {
   [QR.title]: { screen: QR.component },
   [TransactionDetail.title]: { screen: TransactionDetail.component },
   [TransactionDocument.title]: { screen: TransactionDocument.component },
-  [Result.title]: { screen: Result.component },
+  // [Result.title]: { screen: Result.component },
+  [Result.title]: {
+    screen: ({ navigation }) => (
+      <Result.component
+        screenProps={{
+          rootNavigation: navigation,
+        }}
+      />
+    ),
+  },
 };
 
-const Work = StackNavigator(route, {
+const Work = StackNavigator(routes, {
   initialRouteName: QR.title,
   navigationOptions: ({ navigation }) => ({
     title: 'Transaction',

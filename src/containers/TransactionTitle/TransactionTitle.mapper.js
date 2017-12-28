@@ -3,7 +3,7 @@ import TransactionTitle from './TransactionTitle';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    transaction: state.transaction.transaction,
+    title: state.transaction.transaction.name,
   };
 };
 
